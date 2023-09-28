@@ -1,5 +1,5 @@
 <h1>Indrodução à Programação com Python</h1>
-<h2>Informações</h2>
+<h2>Informações ℹ️</h2>
 <ul>
   <li><strong>Livro: </strong>Introdução à Programação com Python - Algoritmos e lógica de programação para iniciantes (Edição 03)</li>
   <li><strong>Autor: </strong>Nilo Ney Coutinho Menezes</li>
