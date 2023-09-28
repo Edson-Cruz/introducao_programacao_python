@@ -150,7 +150,65 @@ while True:
               f" {linha_03[0]} | {linha_03[1]} | {linha_03[2]}\n")
     else:
         print("Selecione uma posição entre 1 e 9!")
+    
+    # Verificando os valores das colunas e do X
+    coluna_01 = [linha_01[0], linha_02[0], linha_03[0]]
+    coluna_02 = [linha_01[1], linha_02[1], linha_03[1]]
+    coluna_03 = [linha_01[2], linha_02[2], linha_03[2]]
+    xis_01 = [linha_01[0], linha_02[1], linha_03[2]]
+    xis_02 = [linha_01[2], linha_02[1], linha_03[0]]
 
+    # Verificando a vitória do jogador 1
+    if (linha_01.count(marca_jogador_01) == 3) or (linha_02.count(marca_jogador_01) == 3) or (linha_03.count(marca_jogador_01) == 3):
+        print("\nParabéns Jogador 1, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!\n")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+    elif (coluna_01.count(marca_jogador_01) == 3) or (coluna_02.count(marca_jogador_01) == 3) or (coluna_03.count(marca_jogador_01) == 3):
+        print("\nParabéns Jogador 1, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+    elif (xis_01.count(marca_jogador_01) == 3) or (xis_02.count(marca_jogador_01) == 3):
+        print("\nParabéns Jogador 1, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+
+    # Parando o jogo caso não haja vitória (Empate)
+    if len(numeros_jogados) == 9:
+        print("Não houve um jogador vencedor!")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
 
     # Iniciando o jogador 2
     jogada_jogador_02 = int(input("Jogador 2 - Selecione a posição que deseja jogar: "))
@@ -270,4 +328,62 @@ while True:
               f" {linha_03[0]} | {linha_03[1]} | {linha_03[2]}\n")
     else:
         print("Selecione uma posição entre 1 e 9!")
-        
+
+    # Verificando os valores das colunas e do X
+    coluna_01 = [linha_01[0], linha_02[0], linha_03[0]]
+    coluna_02 = [linha_01[1], linha_02[1], linha_03[1]]
+    coluna_03 = [linha_01[2], linha_02[2], linha_03[2]]
+    xis_01 = [linha_01[0], linha_02[1], linha_03[2]]
+    xis_02 = [linha_01[2], linha_02[1], linha_03[0]]
+
+    # Verificando a vitória do jogador 2
+    if (linha_01.count(marca_jogador_02) == 3) or (linha_02.count(marca_jogador_02) == 3) or (linha_03.count(marca_jogador_02) == 3):
+        print("\nParabéns Jogador 2, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!\n")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+    elif (coluna_01.count(marca_jogador_02) == 3) or (coluna_02.count(marca_jogador_02) == 3) or (coluna_03.count(marca_jogador_02) == 3):
+        print("\nParabéns Jogador 2, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+    elif (xis_01.count(marca_jogador_02) == 3) or (xis_02.count(marca_jogador_02) == 3):
+        print("\nParabéns Jogador 2, você ganhou!\n")
+        jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+        if jogar_novamente == "SIM".upper().strip():
+            linha_01 = [7, 8, 9]
+            linha_02 = [4, 5, 6]
+            linha_03 = [1, 2, 3]
+            numeros_jogados.clear()
+            print("\nO jogo será iniciado pelo outro jogador!")
+        else:
+            print("Jogo encerrado! Obrigado por jogar!")
+            break
+    
+    # Parando o jogo caso não haja vitória (Empate)
+    if len(numeros_jogados) == 9:
+            print("Não houve um jogador vencedor!")
+            jogar_novamente = input("Deseja jogar novamente? Digite SIM ou NÃO: ").upper().strip()
+            if jogar_novamente == "SIM".upper().strip():
+                linha_01 = [7, 8, 9]
+                linha_02 = [4, 5, 6]
+                linha_03 = [1, 2, 3]
+                numeros_jogados.clear()
+                print("\nO jogo será iniciado pelo outro jogador!")
+            else:
+                print("Jogo encerrado! Obrigado por jogar!")
+                break
